@@ -18,7 +18,9 @@ agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 chain = agent_executor
 
 def main():
-    result = chain.invoke({"input": "search for 3 job positions for an ai engineer using langchain in the bay area on linkedin and list their details"}) 
+    result = chain.invoke({
+        "input": "search for 3 job positions for an ai engineer using langchain in the bay area on linkedin and list their details"
+        }) 
 
     print(result)
 
